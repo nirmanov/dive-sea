@@ -1,0 +1,130 @@
+@use '../../styles/mixins.scss' as *;
+
+.section {
+  padding: 70px 0;
+  background: #f1f1f1;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+}
+
+.title {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #c5c5c5;
+  font-family: Poppins;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 48px;
+  font-feature-settings:
+    'liga' off,
+    'clig' off;
+
+  @include tablet {
+    margin-bottom: 50px;
+    font-size: 32.003px;
+    line-height: 36px;
+  }
+
+  @include mobile {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.sliderWrapper {
+  position: relative;
+  overflow-y: hidden;
+  width: 100%;
+  user-select: none;
+  touch-action: pan-y pinch-zoom;
+}
+
+.slider {
+  display: flex;
+  overflow: visible !important;
+  flex-direction: column;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  :global(.swiper-slide) {
+    width: max-content !important;
+  }
+
+  :global(.swiper-wrapper) {
+    margin-bottom: 70px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.sliderNav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 17.247px;
+  background: #fcfcfd;
+  box-shadow: 0px 43.117px 34.494px -25.87px rgba(15, 15, 15, 0.12);
+  gap: 30px;
+
+  @include tablet {
+    width: 124px;
+    padding: 15px;
+    border-radius: 12.935px;
+    box-shadow: 0px 32.338px 25.87px -19.403px rgba(15, 15, 15, 0.12);
+    gap: 22px;
+  }
+}
+
+.sliderBtnHr {
+  width: 2px;
+  height: 24px;
+  border-radius: 2.156px;
+  background: #e6e8ec;
+}
+
+.sliderBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border: none;
+  outline: none;
+  background: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    @include tablet {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

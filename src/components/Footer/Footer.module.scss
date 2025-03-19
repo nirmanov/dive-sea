@@ -1,0 +1,182 @@
+@use '../../styles/mixins.scss' as *;
+
+.footer {
+  position: relative;
+  padding: 88px 97px 86px;
+  background: #141416;
+
+  @include tablet {
+    padding: 60px 69px;
+  }
+  @include mobile {
+    padding: 52px 24px 40px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 130%;
+  gap: 10px;
+
+  @include tablet {
+    font-size: 21.333px;
+    line-height: 130%;
+  }
+  @include mobile {
+    margin-bottom: 32px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  & svg {
+    width: 65px;
+    height: 65px;
+
+    @include tablet {
+      width: 46px;
+      height: 46px;
+      gap: 7px;
+    }
+  }
+
+  & svg path {
+    fill: #fff;
+  }
+}
+
+.hr {
+  height: 1px;
+  margin-top: 21px;
+  margin-bottom: 56px;
+  opacity: 0.25;
+  background-color: #818181;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    margin-top: 48px;
+    margin-bottom: 26px;
+    opacity: 1;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 70px;
+
+  @include tablet {
+    gap: 50px;
+  }
+  @include mobile {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  color: #b9b9b9;
+  font-family: Inter;
+  font-size: 17.829px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 150%;
+
+  @include tablet {
+    font-size: 12.678px;
+    line-height: 19.017px;
+  }
+  @include mobile {
+    text-transform: uppercase;
+    font-size: 14px;
+
+    line-height: 18.884px;
+  }
+}
+
+.coop {
+  color: #999;
+  font-family: Inter;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25px;
+
+  @include tablet {
+    font-size: 12.089px;
+    line-height: 17.778px;
+  }
+
+  @include mobile {
+    align-self: center;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  & .coopHidden {
+    display: none;
+
+    @include mobile {
+      display: inline-block;
+    }
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 40px;
+
+  @include tablet {
+    gap: 28px;
+  }
+  @include mobile {
+    position: absolute;
+    top: 67px;
+    right: 24px;
+    gap: 10px;
+  }
+}
+
+.socialLink {
+  width: 24px;
+  height: 24px;
+
+  @include tablet {
+    width: 17px;
+    height: 17px;
+  }
+
+  & svg path {
+    transition: fill 0.2s ease;
+  }
+
+  &:hover svg path {
+    fill: #fff;
+  }
+}

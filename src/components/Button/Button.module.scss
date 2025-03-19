@@ -1,0 +1,217 @@
+@use '../../styles/mixins.scss' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-wrap: nowrap;
+  border: none;
+  outline: none;
+  font-style: normal;
+
+  &--primary {
+    padding: 16px 24px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    background: #141416;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 137.5%;
+
+    @include tablet {
+      padding: 11px 16px;
+      border-radius: 11.501px;
+      font-size: 11.501px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    @include mobile {
+      padding: 19px 64.5px;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 110%;
+    }
+
+    &:hover {
+      color: #fff;
+      background: #222;
+    }
+  }
+
+  &--card {
+    width: 120px;
+    height: 50px;
+    letter-spacing: 0.118px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 16px;
+    background: #141416;
+    font-family: Poppins;
+    font-size: 14.115px;
+    font-weight: 600;
+    line-height: 150%;
+
+    @include tablet {
+      width: 90px;
+      height: 38px;
+      letter-spacing: 0.088px;
+      border-radius: 9px;
+      font-size: 10.586px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: #222;
+    }
+  }
+
+  &--dark {
+    min-width: 180px;
+    height: 60px;
+    padding: 18px 29px;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 12px;
+    background: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 137.5%;
+
+    @include tablet {
+      min-width: 130px;
+      height: 42px;
+      padding: 12px 15px;
+      letter-spacing: 0.116px;
+      font-size: 11.571px;
+    }
+    @include mobile {
+      min-width: 128px;
+      height: 47px;
+      padding: 12px 15px;
+      letter-spacing: 0.117px;
+      font-size: 11.661px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: #222;
+    }
+  }
+
+  &--dark-border {
+    height: 60px;
+    padding: 14px 21px;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 12px;
+    background: transparent;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+
+    @include tablet {
+      min-width: 100px;
+      height: 42px;
+      padding: 10px 10px;
+      letter-spacing: 0.116px;
+      font-size: 11.571px;
+    }
+    @include mobile {
+      min-width: 99px;
+      height: 47px;
+      padding: 12px 15px;
+      letter-spacing: 0.117px;
+      font-size: 11.661px;
+    }
+
+    &:hover {
+      color: #000;
+      background: #d7d7d7;
+    }
+  }
+
+  &--white {
+    padding: 20px 24px;
+    letter-spacing: 0.214px;
+    color: #141416;
+    border-radius: 12px;
+    background: #fff;
+    font-family: Outfit;
+    font-size: 21.357px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 130%;
+
+    @include tablet {
+      min-width: 135px;
+      height: 51px;
+      padding: 13px 14px;
+      letter-spacing: 0.16px;
+      font-size: 16.017px;
+    }
+
+    @include mobile {
+      min-width: 91px;
+      height: 34px;
+      padding: 10px 11px;
+      letter-spacing: 0.106px;
+      border-radius: 6.047px;
+      font-size: 10.583px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    &:hover {
+      color: #141416;
+      background: #f2f2f2;
+    }
+  }
+
+  &--white-border {
+    padding: 20px 29px;
+    letter-spacing: 0.214px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background: transparent;
+    font-family: Outfit;
+    font-size: 21.357px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 130%;
+
+    @include tablet {
+      height: 51px;
+      padding: 15px 20px;
+      letter-spacing: 0.16px;
+      font-size: 16.017px;
+    }
+
+    @include mobile {
+      min-width: 91px;
+      height: 34px;
+      padding: 10px 12px;
+      letter-spacing: 0.106px;
+      border-radius: 6.047px;
+      font-size: 10.583px;
+      line-height: 130%;
+    }
+
+    &:hover {
+      color: #1a1a1a;
+      background: #d7d7d7;
+    }
+  }
+}

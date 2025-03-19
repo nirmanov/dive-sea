@@ -1,0 +1,33 @@
+:root {
+  font-family: 'Inter', system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: #f9f9f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 2700px) {
+  html {
+    zoom: 200%;
+  }
+}
+
+@media only screen and (min-width: 8000px) {
+  html {
+    zoom: 400%;
+  }
+}

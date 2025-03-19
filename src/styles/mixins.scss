@@ -1,0 +1,35 @@
+// Breakpoints
+$tablet-min: 600px;
+$desktop-min: 1440px;
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-min}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$desktop-min - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$tablet-min - 1px}) {
+    @content;
+  }
+}
+
+/// Универсальный миксин для динамического изменения CSS-свойств
+/// @param {string} $property - CSS-свойство (например, width, height, font-size)
+/// @param {number} $min-screen - Минимальная ширина экрана (px)
+/// @param {number} $min-value - Значение при минимальной ширине экрана (px, rem, em и т. д.)
+/// @param {number} $max-screen - Максимальная ширина экрана (px)
+/// @param {number} $max-value - Значение при максимальной ширине экрана (px, rem, em и т. д.)
+@mixin dynit($property, $min-value, $max-value, $min-screen, $max-screen) {
+  $value-diff: $max-value - $min-value;
+  $screen-diff: $max-screen - $min-screen;
+  $value2screen: $value-diff / $screen-diff;
+
+  #{$property}: calc(#{$min-value}px + #{$value2screen} * (100vw - #{$min-screen}px));
+}

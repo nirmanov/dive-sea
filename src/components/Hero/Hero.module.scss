@@ -1,0 +1,319 @@
+@use '../../styles/mixins.scss' as *;
+
+.hero {
+  display: flex;
+  padding: 78px 0 172px 97px;
+  gap: 49px;
+
+  @include tablet {
+    padding: 60px 0 115px 67px;
+  }
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    padding: 60px 0 115px 67px;
+  }
+  @include mobile {
+    padding: 74px 0 40px;
+  }
+}
+
+.info {
+  position: relative;
+  max-width: 567px;
+
+  @include tablet {
+    max-width: 350px;
+  }
+  @media screen and (max-width: 780px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding-right: 67px;
+    text-align: center;
+  }
+  @include mobile {
+    padding: 0 30px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 195px;
+    height: 1px;
+    content: '';
+    opacity: 0.2;
+    background-color: #201f1f;
+
+    @include tablet {
+      top: -10px;
+      width: 138px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.over {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    color: #201f1f;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 12px;
+    gap: 8px;
+  }
+
+  &Hr {
+    width: 33px;
+    height: 1px;
+    opacity: 0.5;
+    background-color: #201f1f;
+  }
+}
+
+.title {
+  margin-bottom: 28px;
+  letter-spacing: -3px;
+  text-transform: capitalize;
+  color: #141416;
+  font-family: Poppins;
+  font-size: 76px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 84px;
+
+  @include tablet {
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+    font-size: 54px;
+    line-height: 62px;
+  }
+  @include mobile {
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+.description {
+  max-width: 491px;
+  margin-bottom: 44px;
+  color: #676767;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+
+  @include tablet {
+    margin-bottom: 36px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  @media screen and (max-width: 780px) {
+    max-width: 100%;
+  }
+  @include mobile {
+    margin-bottom: 41px;
+    font-size: 11px;
+    line-height: 17.696px;
+  }
+
+  & span {
+    color: #141416;
+  }
+}
+
+.btnsRow {
+  display: flex;
+  margin-bottom: 81px;
+  gap: 22px;
+
+  @include tablet {
+    margin-bottom: 58px;
+    gap: 16px;
+  }
+  @include mobile {
+    margin-bottom: 77px;
+    gap: 17px;
+  }
+}
+
+.counters {
+  display: flex;
+  gap: 60px;
+
+  @include tablet {
+    gap: 40px;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include tablet {
+    gap: 8px;
+  }
+}
+
+.value {
+  color: #141416;
+  font-family: 'Public Sans';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+.attr {
+  color: #848586;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+
+  @include tablet {
+    font-size: 9px;
+    line-height: 13px;
+  }
+}
+
+.images {
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: 780px) {
+    min-height: 349px;
+  }
+}
+
+.image1 {
+  position: absolute;
+  top: -63px;
+  right: 17.5vw;
+  width: 38.8194444444vw;
+  height: 38.9583333333vw;
+
+  @media screen and (min-width: 1920px) {
+    right: 252px;
+    width: 560px;
+    height: 560px;
+  }
+  @include tablet {
+    @include dynit(top, -44, -63, 1024, 1440);
+    @include dynit(right, 178, 252, 1024, 1440);
+  }
+
+  @media screen and (max-width: 780px) {
+    @include dynit(top, -41, -63, 375, 780);
+    @include dynit(right, 88, 252, 375, 780);
+    @include dynit(width, 304, 300, 375, 780);
+    @include dynit(height, 297, 300, 375, 780);
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image2 {
+  position: absolute;
+  top: 138px;
+  right: 0;
+  width: 25.3472222222vw;
+  height: 31.1805555556vw;
+
+  @media screen and (min-width: 1920px) {
+    width: 365px;
+    height: 450px;
+  }
+  @include tablet {
+    @include dynit(top, 96, 138, 1024, 1440);
+  }
+  @media screen and (max-width: 780px) {
+    @include dynit(top, 63, 138, 375, 780);
+    @include dynit(right, -23, 0, 375, 780);
+    @include dynit(width, 170, 300, 375, 780);
+    @include dynit(height, 240, 330, 375, 780);
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 38px;
+  right: 12.7083333333vw;
+
+  @media screen and (min-width: 1920px) {
+    right: 183px;
+  }
+  @include tablet {
+    @include dynit(top, 26, 28, 1024, 1440);
+    @include dynit(right, 130, 183, 1024, 1440);
+  }
+  @media screen and (max-width: 780px) {
+    @include dynit(top, 20, 20, 375, 780);
+    @include dynit(right, 65, 150, 375, 780);
+  }
+
+  & svg {
+    width: 9.09722222222vw;
+    height: 9.4444444444vw;
+
+    @media screen and (min-width: 1920px) {
+      width: 131px;
+      height: 136px;
+    }
+    @media screen and (max-width: 780px) {
+      @include dynit(width, 63, 92, 375, 780);
+      @include dynit(height, 61, 88, 375, 780);
+    }
+  }
+}
+
+.mesh {
+  position: absolute;
+  top: -19px;
+  right: 0;
+
+  @media screen and (max-width: 780px) {
+    @include dynit(right, -35, 0, 375, 780);
+  }
+
+  & svg {
+    @include tablet {
+      @include dynit(width, 90, 120, 1024, 1440);
+      @include dynit(height, 137, 192, 1024, 1440);
+    }
+    @media screen and (max-width: 780px) {
+      @include dynit(width, 95, 90, 375, 780);
+      @include dynit(height, 110, 137, 375, 780);
+    }
+  }
+}
