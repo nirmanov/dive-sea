@@ -23,12 +23,24 @@
   &.stickyHeader {
     padding: 17px 97px;
     background-color: #fff;
+
+    @include tablet {
+      padding: 17px 67px;
+    }
+
+    @include mobile {
+      padding: 17px 30px;
+    }
   }
 
   .headerContent {
     display: flex;
     align-items: center;
     width: 100%;
+
+    @media screen and (max-width: 700px) {
+      gap: 10px;
+    }
 
     @include mobile {
       justify-content: space-between;
@@ -54,6 +66,10 @@
 
     @include tablet {
       margin-right: 40px;
+    }
+
+    @media screen and (max-width: 700px) {
+      margin-right: 10px;
     }
 
     svg {
@@ -92,6 +108,10 @@
 
     @include tablet {
       gap: 32px;
+    }
+
+    @media screen and (max-width: 700px) {
+      gap: 10px;
     }
 
     @include mobile {
