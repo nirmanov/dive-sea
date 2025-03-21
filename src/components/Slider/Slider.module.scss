@@ -11,7 +11,7 @@
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   color: #c5c5c5;
   font-family: Poppins;
@@ -23,7 +23,7 @@
     'clig' off;
 
   @include tablet {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 32.003px;
     line-height: 36px;
   }
@@ -36,15 +36,15 @@
 
 .sliderWrapper {
   position: relative;
-  overflow-y: hidden;
   width: 100%;
   user-select: none;
   touch-action: pan-y pinch-zoom;
+  overflow-y: hidden;
 }
 
 .slider {
   display: flex;
-  overflow: visible !important;
+  overflow-y: hidden;
   flex-direction: column;
   cursor: grab;
 
@@ -57,6 +57,8 @@
   }
 
   :global(.swiper-wrapper) {
+    overflow-x: visible;
+    padding-top: 20px;
     margin-bottom: 70px;
 
     @include tablet {
